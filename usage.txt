@@ -1,0 +1,14 @@
+# 기본 실행 (표준 분석, 7일간)
+.\IncidentResponse.ps1
+
+# 빠른 분석 (3일간)
+.\IncidentResponse.ps1 -AnalysisScope Quick -TimeRange 3
+
+# 심화 분석 및 보고서 생성
+.\IncidentResponse.ps1 -AnalysisScope Deep -TimeRange 14 -GenerateReport
+
+# 특정 경로에 결과 저장
+.\IncidentResponse.ps1 -OutputPath "C:\Forensics\Case001" -GenerateReport
+
+# 실시간 모니터링 모드 (향후 확장)
+.\IncidentResponse.ps1 -RealTimeMonitoring
